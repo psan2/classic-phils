@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import structural modules
+import React from "react";
+import { withRouter } from "react-router-dom";
+
+//import css
+import "./App.css";
+
+//import components
+import Footer from "./Navigation/Footer";
+import Header from "./Navigation/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Footer />
     </div>
   );
 }
 
-export default App;
+const AppRouter = withRouter(App);
+
+export default AppRouter;
